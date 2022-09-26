@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 120
+  controlID: 24
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -182,7 +182,7 @@ MonoBehaviour:
     y: 0
     width: 2560
     height: 1357
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 99
+  controlID: 113
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -417,22 +417,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Art
+  - Assets
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\Matt Reptard\Documents\GitHub\Group3Project\Group4Level
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 24580000
-    m_LastClickedID: 22564
-    m_ExpandedIDs: 000000001a5800002458000000ca9a3b
+    m_SelectedIDs: 3c430000
+    m_LastClickedID: 17212
+    m_ExpandedIDs: 000000003c43000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -460,7 +460,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 000000003c430000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -583,7 +583,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 84f9ffff52faffff
+      m_ExpandedIDs: dcfaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -645,7 +645,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -13.367186, y: 18.899418, z: -15.62737}
     speed: 2
-    m_Value: {x: -12.165583, y: 17.66371, z: -15.367897}
+    m_Value: {x: -13.367186, y: 18.899418, z: -15.62737}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -698,7 +698,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 60.25531
     speed: 2
-    m_Value: 57.660583
+    m_Value: 60.25531
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -771,8 +771,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -950
     m_HBaseRangeMax: 950
-    m_VBaseRangeMin: -495.5
-    m_VBaseRangeMax: 495.5
+    m_VBaseRangeMin: -506
+    m_VBaseRangeMax: 506
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -789,11 +789,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1900
-      height: 991
+      height: 1012
     m_Scale: {x: 1.1940521, y: 1.1940521}
-    m_Translation: {x: 856.2728, y: 542.9458}
+    m_Translation: {x: 856.2728, y: 553.4458}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -801,9 +801,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -717.1151
-      y: -454.70865
+      y: -463.50223
       width: 1591.2203
-      height: 829.947
+      height: 847.5342
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1900, y: 1012}
