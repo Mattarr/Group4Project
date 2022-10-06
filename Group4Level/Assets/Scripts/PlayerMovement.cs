@@ -17,6 +17,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float playerSpeed;
 
+    // platform branch added code for respawn
+    private Vector3 respawnPoint;
+    public GameObject fallDetector;
+
+    void Start()
+    {
+        // platform branch add respawn point
+        respawnPoint = transform.position;
+    }
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal") * playerSpeed * Time.deltaTime;
@@ -37,6 +46,24 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Flip();
+
+        // platform branch
+        fallDetector.transform.position = 
+        new Vector2(transform.position.x, fallDetector.transform.position.y);
+    }
+    
+    // platform branch add check if collision was fall detector or checkpoint
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "FallDetector")
+        {
+            transform.position = respawnPoint;
+        }
+        else if(collision.tag == "Checkpoint")
+        {
+            respawnPoint = transform.position;
+        }
+ 
     }
 
     private void FixedUpdate()
