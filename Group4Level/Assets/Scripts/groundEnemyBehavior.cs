@@ -55,4 +55,21 @@ public class groundEnemyBehavior : MonoBehaviour
                     }//else if collided with punch then enemy health - enemy power.
 
             }
+    public void TakeDamage(int damage){
+        enemyHealth = enemyHealth - damage;
+        
+
+        if (enemyHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("Ground enemy Died!");
+        this.enabled = false;
+        GetComponent<Collider2D>().enabled = false;
+        Destroy(this.gameObject);
+    }
 }
