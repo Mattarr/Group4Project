@@ -176,7 +176,7 @@ enemy.velocity = new Vector2(+(enemySpeed+1), 0);
                //---------------
                   public void TakeDamage(int damage){
                 enemyHealth = enemyHealth - damage;
-                    pushedBack();
+                    
 
                     if (enemyHealth <= 0)
                     {
