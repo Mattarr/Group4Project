@@ -2798,7 +2798,7 @@ PrefabInstance:
       objectReference: {fileID: 684162332998021093}
     - target: {fileID: 7034856904806350826, guid: 29bd7ea3a7577f0408e6f3e1daf281d8, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7034856904806350826, guid: 29bd7ea3a7577f0408e6f3e1daf281d8, type: 3}
       propertyPath: m_LocalScale.x
@@ -4610,7 +4610,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &857856594131452268
 SpriteRenderer:
