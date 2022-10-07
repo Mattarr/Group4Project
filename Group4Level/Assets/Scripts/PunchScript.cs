@@ -41,7 +41,7 @@ public class PunchScript : MonoBehaviour
             if (enemy.CompareTag("GroundEnemy"))
             {
                 PlaySound(hitSound);
-                enemy.GetComponent<enemyBehavior>().TakeDamage(attackDamage);
+                enemy.GetComponent<GE>().TakeDamage(attackDamage);
             }
 
             else if(enemy.CompareTag("FlyingEnemy"))

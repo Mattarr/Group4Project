@@ -51,15 +51,16 @@ public class GE : MonoBehaviour
                     Die();
                 }
 
-                void Die()
-                {
-                    Debug.Log("walking Enemy has died!");
-                    this.enabled = false;
-                    GetComponent<Collider2D>().enabled = false;
-                    Destroy(this.gameObject);
-
-                }
+                
             }
+ void Die()
+ {
+     Debug.Log("walking Enemy has died!");
+     this.enabled = false;
+     GetComponent<Collider2D>().enabled = false;
+     Destroy(this.gameObject);
+
+ }
 
             
 }
