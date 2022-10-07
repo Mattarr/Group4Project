@@ -48,12 +48,12 @@ public class enemyBehavior : MonoBehaviour
         }
       
         
-      else if(hasCollided == true){
-
-    //bounce back
-    pushedBack();
-       }
-       else  if(distancePlayer < followRange){
+        else if(hasCollided == true){ 
+            //bounce back
+            pushedBack();
+        }
+        
+        else  if(distancePlayer < followRange){
             //Chase player
             followPlayer();
                     
