@@ -138,11 +138,11 @@ public class enemyBehavior : MonoBehaviour
                   }
     
     //when you hit an object turn the other way
-               private void OnTriggerExit2D( Collider2D collision){
+               /*private void OnTriggerExit2D( Collider2D collision){
 
                  transform.localScale = new Vector2(-(Mathf.Sign(enemy.velocity.x)), transform.localScale.y);
 
-                  }
+                  }*/
             
             void OnCollisionEnter2D(Collision2D col){
                
@@ -175,8 +175,21 @@ enemy.velocity = new Vector2(+(enemySpeed+1), 0);
                
                //---------------
                   public void TakeDamage(int damage){
-                enemyHealth = enemyHealth- damage;
+                enemyHealth = enemyHealth - damage;
                     pushedBack();
+
+                    if (enemyHealth <= 0)
+                    {
+                        Die();
+                    }
                  }
+
+                  void Die()
+                  {
+                      Debug.Log("Ground enemy Died!");
+                      this.enabled = false;
+                      GetComponent<Collider2D>().enabled = false;
+                      Destroy(this.gameObject);
+                  }
        
         }
