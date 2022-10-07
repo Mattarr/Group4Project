@@ -16,9 +16,7 @@ public class flyingBehavior : MonoBehaviour
     public int enemyPower;
         Rigidbody2D enemy;
         Vector3 initPos;
-
-        public int enemyHealth;
-        
+       
     // Start is called before the first frame update
     void Start()
     {
@@ -95,25 +93,6 @@ transform.position = new Vector3( initPos.x, Mathf.Sin(Time.time)*1f + initPos.y
                                 }
                     }//else if collided with punch then enemy health - enemy power.
 
-            }
-
-            public void TakeDamage(int damage)
-            {
-                enemyHealth = enemyHealth - damage;
-                pushedBack();
-                if (enemyHealth <= 0)
-                {
-                    Die();
-                }
-
-                void Die()
-                {
-                    Debug.Log("Flying Enemy has died!");
-                    this.enabled = false;
-                    GetComponent<Collider2D>().enabled = false;
-                    Destroy(this.gameObject);
-
-                }
             }
 
 }

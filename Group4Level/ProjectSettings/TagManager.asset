@@ -6,8 +6,6 @@ TagManager:
   tags:
   - FallDetector
   - Checkpoint
-  - FlyingEnemy
-  - GroundEnemy
   layers:
   - Default
   - TransparentFX
@@ -15,7 +13,7 @@ TagManager:
   - ground
   - Water
   - UI
-  - Enemies
+  - 
   - 
   - 
   - 
