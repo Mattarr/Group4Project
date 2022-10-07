@@ -6,11 +6,18 @@ using UnityEngine.Timeline;
 
 public class PunchScript : MonoBehaviour
 {
+    public AudioSource audioSource;
     public Animator animator;
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     public int attackDamage = 1;
+    public AudioClip hitSound;
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+    
     void Update()
     {
         //lets player punch
@@ -32,12 +39,14 @@ public class PunchScript : MonoBehaviour
             Debug.Log("we hit" + enemy.name);
 
             if (enemy.CompareTag("GroundEnemy"))
-
+            {
+                PlaySound(hitSound);
                 enemy.GetComponent<enemyBehavior>().TakeDamage(attackDamage);
+            }
 
             else if(enemy.CompareTag("FlyingEnemy"))
             {
-
+                PlaySound(hitSound);
                 enemy.GetComponent<flyingBehavior>().TakeDamage(attackDamage);
             }
         }
@@ -49,5 +58,11 @@ public class PunchScript : MonoBehaviour
         if (attackPoint == null)
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 }

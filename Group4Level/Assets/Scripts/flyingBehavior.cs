@@ -16,7 +16,7 @@ public class flyingBehavior : MonoBehaviour
     public int enemyPower;
         Rigidbody2D enemy;
         Vector3 initPos;
-
+        public AudioClip hitSound;
         public int enemyHealth;
         
     // Start is called before the first frame update

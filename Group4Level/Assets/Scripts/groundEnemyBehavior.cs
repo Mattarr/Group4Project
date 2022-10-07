@@ -11,7 +11,7 @@ public class groundEnemyBehavior : MonoBehaviour
     public Transform groundDetection;
     public int enemyHealth;
     public int enemyPower;
-   
+    public AudioClip collectedClip;
 
     // Start is called before the first frame update
     void Start()
