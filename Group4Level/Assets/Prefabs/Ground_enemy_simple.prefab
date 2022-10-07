@@ -178,5 +178,5 @@ MonoBehaviour:
   speed: 1
   Boxer: {fileID: 0}
   groundDetection: {fileID: 3341757223099668539}
-  enemyHealth: 0
+  enemyHealth: 1
   enemyPower: 0
