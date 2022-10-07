@@ -8,11 +8,13 @@ public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
     private float speed = 10f;          //player speed
-    private float jumpingPower = 3f;   //player jumping power
+    private float jumpingPower = 5f;   //player jumping power
     private bool isFacingRight = true;
     private bool isJumping;
     private bool IsGrounded;
     private Animator anim;
+
+    public PlayerHealth health;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -28,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         // platform branch add respawn point
         respawnPoint = transform.position;
         anim = GetComponent<Animator>();
+        
     }
     void Update()
     {
@@ -85,7 +88,11 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y * 0.5f);
         }
-        
+        if (health.playerHealth <= 0)
+        {
+            transform.position = respawnPoint;
+            health.playerHealth = 3;
+        }
         //calls flip method
         Flip();
 
@@ -105,6 +112,8 @@ public class PlayerMovement : MonoBehaviour
         {
             respawnPoint = transform.position;
         }
+
+        
  
     }
 
@@ -127,7 +136,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    
 }
 
     
